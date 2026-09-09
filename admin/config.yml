@@ -3,7 +3,7 @@ local_backend: true
 backend:
   name: github
   repo: src-ed-co-uk/src-ed-co-uk.github.io
-  branch: master
+  branch: main
   base_url: https://src-cms-login.owen-da5.workers.dev
 
 logo_url: /images/logo.jpg
