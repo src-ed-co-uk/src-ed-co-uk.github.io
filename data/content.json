@@ -1,4 +1,10 @@
 {
+  "hero": {
+    "heading": "Dyslexia assessments and specialist teaching in Northamptonshire",
+    "text": "Independent diagnostic assessments for children and adults, with clear reports and practical support. Based between Wellingborough, Northampton and Bedford.",
+    "buttonLabel": "Get in touch",
+    "buttonLink": "#contact-section"
+  },
   "about": {
     "heading": "My name is Stephanie",
     "body": "Throughout my twenty four year teaching career, I have taught in both mainstream and special schools, working with learners who have Specific Learning Difficulties (including dyslexia, dyspraxia, dysgraphia), Autism, ADHD, Profound and Multiple Learning Difficulties, and Severe Learning Difficulties.\n\nMany of these individuals had complex needs and conditions that required an adapted National Curriculum.\n\nDuring the last seven years of my career, since working independently, I have also been supporting adults who have needed additional learning support and study skills training to help manage their studies.\n",
@@ -10,7 +16,7 @@
     "aboutBody": "SRC was setup in January 2017 after completing my Assessors qualification, leaving behind a career of 14 years employed in schools.\n\nI decided to work independently and focus on helping individuals with Specific Learning Difficulties.\n"
   },
   "location": {
-    "baseDescription": "Based at Strixton Manor Business Centre, between Wellingborough and Northampton",
+    "baseDescription": "Based at Strixton Manor Business Centre, between Wellingborough, Northampton and Bedford",
     "areas": [
       "Northampton",
       "Wellingborough",
