@@ -1364,6 +1364,9 @@ h1, h2, h3, h4, h5,
 .unit-6 .unit-4-icon span {
   font-size: 3rem;
 }
+.unit-6 {
+  padding-right: 1.5rem;
+}
 .unit-6 h3 {
   font-size: 22px;
   font-weight: 500;

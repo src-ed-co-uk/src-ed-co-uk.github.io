@@ -135,7 +135,7 @@ function renderCards(services) {
     const cells = pair.map((svc, j) => {
       const delay = (i + j) * 100;
       const { card } = svc;
-      return `            <div class="col-md-6 col-lg-6 mb-6 mb-lg-6" data-aos="fade-up" data-aos-delay="${delay}">
+      return `            <div class="col-md-6 col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="${delay}">
                <div class="unit-6 d-flex">
                   <div class="unit-4-icon mr-4"><span class="text-primary ${escapeHtml(card.icon)}"></span></div>
                   <div>
