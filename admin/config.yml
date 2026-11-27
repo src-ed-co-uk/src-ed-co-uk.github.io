@@ -165,6 +165,14 @@ collections:
         label: About, Footer and Location
         file: data/content.json
         fields:
+          - name: hero
+            label: Banner (top of page)
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string, hint: "The main page heading. Keep the service and the area in it." }
+              - { name: text, label: Text, widget: text }
+              - { name: buttonLabel, label: Button label, widget: string, required: false }
+              - { name: buttonLink, label: Button link, widget: string, required: false, default: "#contact-section" }
           - name: location
             label: Location & Areas Served
             widget: object

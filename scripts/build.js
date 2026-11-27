@@ -192,6 +192,15 @@ function renderServicesIntro(location) {
                <p class="mb-0">${escapeHtml(location.credentials || "")}</p>`;
 }
 
+function renderHero(hero) {
+  if (!hero || !hero.heading) return "";
+  const button = hero.buttonLabel
+    ? `\n                  <p class="mb-0"><a href="${escapeHtml(hero.buttonLink || "#contact-section")}" class="btn btn-primary">${escapeHtml(hero.buttonLabel)}</a></p>`
+    : "";
+  return `                  <h1 class="hero-heading text-primary mb-3">${escapeHtml(hero.heading)}</h1>
+                  <p class="hero-text mb-4">${escapeHtml(hero.text || "")}</p>${button}`;
+}
+
 function renderWhyIndependent(block) {
   if (!block || !block.body) return "";
   const body = markdown(block.body)
@@ -378,6 +387,7 @@ function main() {
   let html = fs.readFileSync(INDEX_FILE, "utf8");
   const location = content.location || { areas: [] };
   html = replaceMarker(html, "JSON_LD", renderJsonLd(services, location));
+  html = replaceMarker(html, "HERO", renderHero(content.hero));
   html = replaceMarker(html, "SERVICES_INTRO", renderServicesIntro(location));
   html = replaceMarker(html, "WHY_INDEPENDENT", renderWhyIndependent(content.whyIndependent));
   html = replaceMarker(html, "SERVICE_CARDS", renderCards(services));
