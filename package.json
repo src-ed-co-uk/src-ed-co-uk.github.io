@@ -1,0 +1,17 @@
+{
+  "name": "stephanierumney-github-io",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Stephanie Rumney Consultancy website",
+  "scripts": {
+    "build:css": "sass --no-source-map --quiet-deps scss/bootstrap-site.scss:css/bootstrap.css scss/style.scss:css/style.css",
+    "build:html": "node scripts/build.js",
+    "build": "npm run build:css && npm run build:html"
+  },
+  "dependencies": {
+    "marked": "^18.0.12"
+  },
+  "devDependencies": {
+    "sass": "^1.108.2"
+  }
+}

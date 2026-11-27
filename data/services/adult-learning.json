@@ -1,0 +1,29 @@
+{
+  "id": "adultLearning",
+  "slug": "adult-learning-support",
+  "order": 60,
+  "card": {
+    "title": "Adult Learning",
+    "shortDescription": "Support for individuals studying and in the workplace.",
+    "icon": "icon-cogs"
+  },
+  "modal": {
+    "title": "Adult Learning",
+    "bullets": [
+      "Areas of targeted support agreed beforehand such as; study skills, organisation, and planning time.",
+      "Emotional and mental wellbeing support available through the sessions and where it arises. Although I am certified in Level 2 Counselling Skills, I am not a counsellor. If it is apparent this would be advised, you will be signposted to counselling support."
+    ]
+  },
+  "schemaOffers": [
+    {
+      "name": "Adult Learning Support",
+      "description": "Support for individuals studying and in the workplace. Includes study skills, organization, planning, and wellbeing support."
+    }
+  ],
+  "feeRows": [],
+  "page": {
+    "seoTitle": "Adult Dyslexia & Study Skills Support | Northampton",
+    "intro": "Dyslexia and other Specific Learning Difficulties do not stop at the school gate. Many adults reach university, a professional qualification or a demanding job before the gap between their ability and their written work becomes a problem, and many have never been assessed.\n\nI offer one-to-one support for adults who are studying or in work: study skills, organisation, planning and managing time, and strategies for reading, writing and remembering information. Sessions are tailored to what you actually need to do: an essay, an exam, a report for your manager.\n\n### Not yet assessed?\n\nIf you have never had a diagnostic assessment, that is usually the right first step. A [full diagnostic assessment](/services/dyslexia-diagnostic-assessment/) gives you a clear understanding of your profile and, for university students, is the evidence needed to apply for **Disabled Students' Allowance (DSA)**, which can fund specialist study-skills support, equipment and software. For people in work, the report supports a request for reasonable adjustments from an employer.",
+    "metaDescription": "One-to-one study skills and workplace support for adults with dyslexia and SpLD near Northampton and Wellingborough. Diagnostic assessments for DSA applications also available."
+  }
+}

@@ -1,0 +1,223 @@
+local_backend: true
+
+backend:
+  name: github
+  repo: src-ed-co-uk/src-ed-co-uk.github.io
+  branch: main
+  base_url: https://src-cms-login.owen-da5.workers.dev
+
+logo_url: /images/logo.jpg
+
+media_folder: images
+public_folder: /images
+
+collections:
+  - name: services
+    label: Services
+    label_singular: Service
+    folder: data/services
+    extension: json
+    format: json
+    create: true
+    identifier_field: id
+    summary: "{{card.title}}"
+    sortable_fields: [order]
+    fields:
+      - {
+          name: id,
+          label: ID,
+          widget: string,
+          hint: "Lowercase, no spaces, e.g. spotlightAssessment. Never change this once the service is live.",
+        }
+      - {
+          name: order,
+          label: Position,
+          widget: number,
+          value_type: int,
+          required: false,
+          hint: "Lower numbers appear first. Leave gaps of 10 so new services can slot in between.",
+        }
+      - {
+          name: slug,
+          label: Web Address,
+          widget: string,
+          required: false,
+          pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers and hyphens only"],
+          hint: "The page lives at /services/<this>/, e.g. dyslexia-diagnostic-assessment. Changing it breaks existing links.",
+        }
+      - name: page
+        label: Service Page
+        widget: object
+        required: false
+        collapsed: true
+        hint: "Optional extras for the service's own page. Leave blank to use the card text."
+        fields:
+          - { name: intro, label: Introduction, widget: markdown, required: false, buttons: [bold, italic, link], editor_components: [] }
+          - { name: seoTitle, label: Browser/Google Title, widget: string, required: false, hint: "Under 60 characters. Defaults to '<Service> in Northampton & Wellingborough | Stephanie Rumney Consultancy'." }
+          - { name: metaDescription, label: Google Description, widget: text, required: false, hint: "Under 160 characters." }
+      - name: card
+        label: Services Card
+        widget: object
+        required: false
+        collapsed: false
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: shortDescription, label: Short Description, widget: text }
+          - name: icon
+            label: Icon
+            widget: select
+            options:
+              - { label: "Document", value: "icon-file-text" }
+              - { label: "Magnifying glass", value: "icon-search" }
+              - { label: "People", value: "icon-users" }
+              - { label: "House", value: "icon-home2" }
+              - { label: "Book", value: "icon-book" }
+              - { label: "Cogs", value: "icon-cogs" }
+              - { label: "Sun", value: "icon-wb_sunny" }
+      - name: modal
+        label: "Service Details (bullet points on the service page)"
+        widget: object
+        required: false
+        collapsed: false
+        fields:
+          - { name: title, label: Title, widget: string }
+          - {
+              name: bullets,
+              label: Bullet Points,
+              widget: list,
+              field: { name: point, label: Point, widget: text },
+            }
+      - name: feeRows
+        label: Fees Table Rows
+        widget: list
+        required: false
+        summary: "{{fields.label}} — {{fields.price}}"
+        fields:
+          - { name: label, label: Description, widget: string }
+          - {
+              name: price,
+              label: Price,
+              widget: string,
+              hint: "Include the £ sign, e.g. £550 or £POA.",
+            }
+      - name: schemaOffers
+        label: Search Engine Listings
+        widget: list
+        required: false
+        collapsed: true
+        summary: "{{fields.name}}"
+        hint: "Used by Google, not shown on the page. Safe to leave alone."
+        fields:
+          - { name: name, label: Name, widget: string }
+          - { name: description, label: Description, widget: text }
+          - {
+              name: price,
+              label: Price,
+              widget: number,
+              value_type: int,
+              required: false,
+            }
+          - {
+              name: priceCurrency,
+              label: Currency,
+              widget: hidden,
+              default: GBP,
+            }
+
+  - name: policies
+    label: Policies
+    label_singular: Policy
+    folder: data/policies
+    extension: json
+    format: json
+    create: true
+    identifier_field: title
+    summary: "{{title}}"
+    sortable_fields: [order]
+    media_folder: /docs/policies
+    public_folder: /docs/policies
+    fields:
+      - {
+          name: title,
+          label: Title,
+          widget: string,
+          hint: "The link text shown in the website footer.",
+        }
+      - {
+          name: file,
+          label: Document (PDF),
+          widget: file,
+          hint: "Upload a new PDF or pick an existing one.",
+        }
+      - {
+          name: order,
+          label: Position,
+          widget: number,
+          value_type: int,
+          required: false,
+          hint: "Lower numbers appear first in the footer.",
+        }
+
+  - name: content
+    label: Page Text
+    files:
+      - name: content
+        label: About, Footer and Location
+        file: data/content.json
+        fields:
+          - name: hero
+            label: Banner (top of page)
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string, hint: "The main page heading. Keep the service and the area in it." }
+              - { name: text, label: Text, widget: text }
+              - { name: buttonLabel, label: Button label, widget: string, required: false }
+              - { name: buttonLink, label: Button link, widget: string, required: false, default: "#contact-section" }
+          - name: location
+            label: Location & Areas Served
+            widget: object
+            fields:
+              - { name: baseDescription, label: Where you are based, widget: string }
+              - { name: areas, label: Towns served, widget: list, field: { name: area, label: Town, widget: string }, hint: "Used in page text and sent to Google as areas served." }
+              - { name: servicesIntro, label: Services section intro, widget: text, hint: "You can write {baseDescription} and {areas} and they will be filled in." }
+              - { name: credentials, label: Credentials line, widget: text, required: false }
+          - name: whyIndependent
+            label: Why an independent assessment?
+            widget: object
+            required: false
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Text, widget: markdown, buttons: [bold, italic, link], editor_components: [] }
+          - name: about
+            label: About Me
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - {
+                  name: body,
+                  label: Text,
+                  widget: markdown,
+                  buttons: [bold, italic, link],
+                  editor_components: [],
+                  hint: "Leave a blank line between paragraphs.",
+                }
+              - { name: moreTitle, label: "Learn More Title", widget: string }
+              - {
+                  name: moreBody,
+                  label: "Learn More Text",
+                  widget: markdown,
+                  buttons: [bold, italic, link],
+                  editor_components: [],
+                }
+          - name: footer
+            label: Footer
+            widget: object
+            fields:
+              - { name: aboutHeading, label: Heading, widget: string }
+              - {
+                  name: aboutBody,
+                  label: Text,
+                  widget: markdown,
+                  buttons: [bold, italic, link],
+                  editor_components: [],
+                }

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.src-ed.co.uk/sitemap.xml

@@ -1,0 +1,43 @@
+{
+  "id": "fullDiagnostic",
+  "slug": "dyslexia-diagnostic-assessment",
+  "order": 10,
+  "card": {
+    "title": "Full Diagnostic Assessment",
+    "shortDescription": "A face-to-face assessment followed by a substantial written report.",
+    "icon": "icon-file-text"
+  },
+  "modal": {
+    "title": "Full Diagnostic Assessment",
+    "bullets": [
+      "Approximately 3 hours, this can only be completed on individuals who are 8 years or older.",
+      "Assessment consists of standardised assessments which reflect strengths and challenges across underlying ability and cognitive processing abilities.",
+      "Assessment of attainment in the areas of reading, spelling, and writing.",
+      "Detailed diagnostic written report, including recommendations and any considerations for exam access arrangements.",
+      "This report will travel with the individual for life as I hold an APC."
+    ]
+  },
+  "schemaOffers": [
+    {
+      "name": "Full Diagnostic Assessment (Ages 8+)",
+      "description": "A face-to-face assessment followed by a substantial written report. Comprehensive diagnostic assessment including detailed recommendations and considerations for exam access arrangements.",
+      "price": 550,
+      "priceCurrency": "GBP"
+    }
+  ],
+  "feeRows": [
+    {
+      "label": "Full Diagnostic Assessment Report (8+)",
+      "price": "£550"
+    },
+    {
+      "label": "Full Diagnostic Assessment Report - School Booking",
+      "price": "£POA"
+    }
+  ],
+  "page": {
+    "seoTitle": "Dyslexia Diagnostic Assessment | Northampton & Wellingborough",
+    "metaDescription": "Full diagnostic dyslexia and SpLD assessment for ages 8+ (children, students and adults) near Northampton. APC-holding assessor; report accepted for exam access arrangements and DSA.",
+    "intro": "A full diagnostic assessment is the only assessment that can formally identify dyslexia or another Specific Learning Difficulty (SpLD). It is suitable for children from age 8, young people and adults, including university students and people in work.\n\n### Who is it for?\n\nAnyone aged 8 or over where there is a concern about reading, spelling, writing, or how they process and remember information, whether that concern comes from a parent, a school, a college or university, an employer, or the individual themselves.\n\n### How long does it take?\n\nThe assessment itself takes around three hours, face to face. You will receive the written report shortly afterwards.\n\n### What happens on the day?\n\nThe session uses standardised tests that look at underlying ability and cognitive processing (such as phonological processing, working memory and processing speed) alongside attainment in reading, spelling and writing. It is paced for the individual, with breaks as needed.\n\n### What do you receive?\n\nA detailed diagnostic report that explains the results in plain language, states whether the profile is consistent with dyslexia or another SpLD, and sets out specific recommendations for home, school, college, university or the workplace.\n\nBecause I hold an Assessment Practising Certificate (APC), the report is accepted as evidence for **exam access arrangements** (such as extra time) and for **Disabled Students' Allowance (DSA)** applications, and it remains valid for life, so it does not need to be repeated at each stage of education.\n\n### What does it cost?\n\nFees are listed below. School bookings are priced on request."
+  }
+}
