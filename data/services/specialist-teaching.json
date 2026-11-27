@@ -1,5 +1,6 @@
 {
   "id": "specialistTeaching",
+  "slug": "specialist-dyslexia-teaching",
   "order": 50,
   "card": {
     "title": "Specialist Teaching",
@@ -39,5 +40,8 @@
       "label": "6 Hours Specialist Teaching 1:1 (Block booked)",
       "price": "£300 (£50 per session)"
     }
-  ]
+  ],
+  "page": {
+    "seoTitle": "Specialist Dyslexia Teaching | Northampton & Wellingborough"
+  }
 }
