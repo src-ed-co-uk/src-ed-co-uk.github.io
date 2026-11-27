@@ -1367,6 +1367,14 @@ h1, h2, h3, h4, h5,
   font-size: 20px;
 }
 
+.why-panel {
+  border-left: 4px solid #086314;
+  font-size: 1rem;
+}
+.why-panel p:last-child {
+  margin-bottom: 0;
+}
+
 .fee-table td {
   padding: 0.5rem 0;
   border-bottom: 1px solid #e9ecef;

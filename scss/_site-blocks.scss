@@ -907,6 +907,15 @@
 	}
 }
 
+.why-panel {
+	border-left: 4px solid $green;
+	font-size: 1rem;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
 .fee-table {
 	td {
 		padding: 0.5rem 0;

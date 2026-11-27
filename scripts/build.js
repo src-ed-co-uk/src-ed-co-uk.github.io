@@ -198,7 +198,7 @@ function renderWhyIndependent(block) {
     .split("\n")
     .map((line) => "               " + line)
     .join("\n");
-  return `               <h3 class="h4 text-primary mt-5 mb-3">${escapeHtml(block.heading || "")}</h3>\n${body}`;
+  return `               <h3 class="h4 text-primary mb-3">${escapeHtml(block.heading || "")}</h3>\n${body}`;
 }
 
 function renderServiceSchema(svc, location) {
