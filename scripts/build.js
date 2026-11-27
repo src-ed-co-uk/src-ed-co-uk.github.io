@@ -187,8 +187,8 @@ ${bullets}
 
 function renderServicesIntro(location) {
   const areas = areaList(location.areas || []);
-  return `               <p class="lead mb-2">${escapeHtml(fillLocation(location.servicesIntro, location))}</p>
-               <p class="mb-2">${escapeHtml(fillLocation("{baseDescription}", location))}. Working across ${escapeHtml(areas)}.</p>
+  return `               <p>${escapeHtml(fillLocation(location.servicesIntro, location))}</p>
+               <p>${escapeHtml(fillLocation("{baseDescription}", location))}. Working across ${escapeHtml(areas)}.</p>
                <p class="mb-0">${escapeHtml(location.credentials || "")}</p>`;
 }
 
@@ -198,7 +198,7 @@ function renderWhyIndependent(block) {
     .split("\n")
     .map((line) => "               " + line)
     .join("\n");
-  return `               <h3 class="h4 text-primary mb-3">${escapeHtml(block.heading || "")}</h3>\n${body}`;
+  return `               <h3 class="h5 text-primary mb-3">${escapeHtml(block.heading || "")}</h3>\n${body}`;
 }
 
 function renderServiceSchema(svc, location) {
