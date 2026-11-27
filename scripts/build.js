@@ -244,7 +244,7 @@ function renderServicePage(svc, services, location, template) {
     )
     .join("\n            ");
   const feesBlock = fees
-    ? `<h2 class="h4 text-primary mt-5 mb-3">Fees</h2>\n         <table class="col-12">\n            ${fees}\n         </table>`
+    ? `<h2 class="h4 text-primary mt-5 mb-3">Fees</h2>\n         <table class="col-12 fee-table">\n            ${fees}\n         </table>`
     : "";
   const intro = page.intro ? markdown(page.intro) : `<p>${escapeHtml(svc.card.shortDescription)}</p>`;
   const otherServices = services
