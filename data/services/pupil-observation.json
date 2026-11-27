@@ -1,5 +1,6 @@
 {
   "id": "pupilObservation",
+  "slug": "pupil-observation",
   "order": 30,
   "card": {
     "title": "Pupil Observation",

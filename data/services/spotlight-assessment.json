@@ -1,5 +1,6 @@
 {
   "id": "spotlightAssessment",
+  "slug": "spotlight-dyslexia-assessment",
   "order": 20,
   "card": {
     "title": "Spotlight Assessment",
@@ -28,5 +29,8 @@
       "label": "Spotlight Assessment",
       "price": "£300"
     }
-  ]
+  ],
+  "page": {
+    "seoTitle": "Spotlight Dyslexia Assessment | Northampton & Wellingborough"
+  }
 }

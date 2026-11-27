@@ -1,5 +1,6 @@
 {
   "id": "adultLearning",
+  "slug": "adult-learning-support",
   "order": 60,
   "card": {
     "title": "Adult Learning",
@@ -19,5 +20,8 @@
       "description": "Support for individuals studying and in the workplace. Includes study skills, organization, planning, and wellbeing support."
     }
   ],
-  "feeRows": []
+  "feeRows": [],
+  "page": {
+    "seoTitle": "Adult Dyslexia & Study Skills Support | Northampton"
+  }
 }

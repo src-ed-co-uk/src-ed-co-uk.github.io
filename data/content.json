@@ -8,5 +8,17 @@
   "footer": {
     "aboutHeading": "About SRC ED",
     "aboutBody": "SRC was setup in January 2017 after completing my Assessors qualification, leaving behind a career of 14 years employed in schools.\n\nI decided to work independently and focus on helping individuals with Specific Learning Difficulties.\n"
+  },
+  "location": {
+    "baseDescription": "Based at Strixton Manor Business Centre, between Wellingborough and Northampton",
+    "areas": [
+      "Northampton",
+      "Wellingborough",
+      "Kettering",
+      "Rushden",
+      "Milton Keynes",
+      "Bedford"
+    ],
+    "servicesIntro": "Independent dyslexia and Specific Learning Difficulties (SpLD) assessments, specialist teaching and study-skills support for children, young people and adults. {baseDescription}, working with families, schools and adult learners across {areas}."
   }
 }

@@ -1,5 +1,6 @@
 {
   "id": "fullDiagnostic",
+  "slug": "dyslexia-diagnostic-assessment",
   "order": 10,
   "card": {
     "title": "Full Diagnostic Assessment",
@@ -33,5 +34,9 @@
       "label": "Full Diagnostic Assessment Report - School Booking",
       "price": "£POA"
     }
-  ]
+  ],
+  "page": {
+    "seoTitle": "Dyslexia Diagnostic Assessment | Northampton & Wellingborough",
+    "metaDescription": "Full diagnostic dyslexia/SpLD assessment (age 8+) with a detailed written report and exam access arrangement recommendations, by an APC-holding assessor near Northampton."
+  }
 }

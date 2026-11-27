@@ -37,6 +37,24 @@ collections:
           required: false,
           hint: "Lower numbers appear first. Leave gaps of 10 so new services can slot in between.",
         }
+      - {
+          name: slug,
+          label: Web Address,
+          widget: string,
+          required: false,
+          pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers and hyphens only"],
+          hint: "The page lives at /services/<this>/, e.g. dyslexia-diagnostic-assessment. Changing it breaks existing links.",
+        }
+      - name: page
+        label: Service Page
+        widget: object
+        required: false
+        collapsed: true
+        hint: "Optional extras for the service's own page. Leave blank to use the card text."
+        fields:
+          - { name: intro, label: Introduction, widget: markdown, required: false, buttons: [bold, italic, link], editor_components: [] }
+          - { name: seoTitle, label: Browser/Google Title, widget: string, required: false, hint: "Under 60 characters. Defaults to '<Service> in Northampton & Wellingborough | Stephanie Rumney Consultancy'." }
+          - { name: metaDescription, label: Google Description, widget: text, required: false, hint: "Under 160 characters." }
       - name: card
         label: Services Card
         widget: object
@@ -57,7 +75,7 @@ collections:
               - { label: "Cogs", value: "icon-cogs" }
               - { label: "Sun", value: "icon-wb_sunny" }
       - name: modal
-        label: "Learn More Popup"
+        label: "Service Details (bullet points on the service page)"
         widget: object
         required: false
         collapsed: false
@@ -144,9 +162,16 @@ collections:
     label: Page Text
     files:
       - name: content
-        label: About and Footer
+        label: About, Footer and Location
         file: data/content.json
         fields:
+          - name: location
+            label: Location & Areas Served
+            widget: object
+            fields:
+              - { name: baseDescription, label: Where you are based, widget: string }
+              - { name: areas, label: Towns served, widget: list, field: { name: area, label: Town, widget: string }, hint: "Used in page text and sent to Google as areas served." }
+              - { name: servicesIntro, label: Services section intro, widget: text, hint: "You can write {baseDescription} and {areas} and they will be filled in." }
           - name: about
             label: About Me
             widget: object
