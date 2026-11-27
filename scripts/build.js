@@ -186,7 +186,9 @@ ${bullets}
 }
 
 function renderServicesIntro(location) {
-  return `               <p class="lead">${escapeHtml(fillLocation(location.servicesIntro, location))}</p>`;
+  const areas = areaList(location.areas || []);
+  return `               <p class="lead mb-2">${escapeHtml(fillLocation(location.servicesIntro, location))}</p>
+               <p class="mb-0">${escapeHtml(fillLocation("{baseDescription}", location))}. Working across ${escapeHtml(areas)}.</p>`;
 }
 
 function renderServiceSchema(svc, location) {
