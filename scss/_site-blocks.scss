@@ -907,6 +907,19 @@
 	}
 }
 
+.unit-6 {
+	padding-right: 1.5rem;
+
+	.unit-4-icon span {
+		font-size: 3rem;
+	}
+
+	h3 {
+		font-size: 22px;
+		font-weight: 500;
+	}
+}
+
 .h-entry {
 	img {
 		margin-bottom: 30px;
@@ -1554,8 +1567,8 @@
 
 .section-title {
 	color: $green;
-	font-size: 40px;
-	font-weight: 900;
+	font-size: 36px;
+	font-weight: 500;
 
 	@include media-breakpoint-down(md) {
 		font-size: 30px;
