@@ -9282,9 +9282,6 @@ button.bg-dark:focus {
 
 .text-primary {
   color: #086314 !important;
-  font-family: 'Snell Roundhand', sans-serif;
-  font-size: 2.1rem;
-  font-weight: bold;
 }
 
 a.text-primary:hover,
