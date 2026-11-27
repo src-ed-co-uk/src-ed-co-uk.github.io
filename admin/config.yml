@@ -172,6 +172,14 @@ collections:
               - { name: baseDescription, label: Where you are based, widget: string }
               - { name: areas, label: Towns served, widget: list, field: { name: area, label: Town, widget: string }, hint: "Used in page text and sent to Google as areas served." }
               - { name: servicesIntro, label: Services section intro, widget: text, hint: "You can write {baseDescription} and {areas} and they will be filled in." }
+              - { name: credentials, label: Credentials line, widget: text, required: false }
+          - name: whyIndependent
+            label: Why an independent assessment?
+            widget: object
+            required: false
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Text, widget: markdown, buttons: [bold, italic, link], editor_components: [] }
           - name: about
             label: About Me
             widget: object

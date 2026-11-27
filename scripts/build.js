@@ -188,7 +188,17 @@ ${bullets}
 function renderServicesIntro(location) {
   const areas = areaList(location.areas || []);
   return `               <p class="lead mb-2">${escapeHtml(fillLocation(location.servicesIntro, location))}</p>
-               <p class="mb-0">${escapeHtml(fillLocation("{baseDescription}", location))}. Working across ${escapeHtml(areas)}.</p>`;
+               <p class="mb-2">${escapeHtml(fillLocation("{baseDescription}", location))}. Working across ${escapeHtml(areas)}.</p>
+               <p class="mb-0">${escapeHtml(location.credentials || "")}</p>`;
+}
+
+function renderWhyIndependent(block) {
+  if (!block || !block.body) return "";
+  const body = markdown(block.body)
+    .split("\n")
+    .map((line) => "               " + line)
+    .join("\n");
+  return `               <h3 class="h4 text-primary mt-5 mb-3">${escapeHtml(block.heading || "")}</h3>\n${body}`;
 }
 
 function renderServiceSchema(svc, location) {
@@ -252,6 +262,7 @@ function renderServicePage(svc, services, location, template) {
     H1: escapeHtml(svc.card.title),
     INTRO: intro,
     BULLETS: bullets,
+    BULLETS_HEADING: page.intro ? "At a glance" : "What this involves",
     FEES: feesBlock,
     LOCATION: locationPara,
     OTHER_SERVICES: otherServices,
@@ -368,6 +379,7 @@ function main() {
   const location = content.location || { areas: [] };
   html = replaceMarker(html, "JSON_LD", renderJsonLd(services, location));
   html = replaceMarker(html, "SERVICES_INTRO", renderServicesIntro(location));
+  html = replaceMarker(html, "WHY_INDEPENDENT", renderWhyIndependent(content.whyIndependent));
   html = replaceMarker(html, "SERVICE_CARDS", renderCards(services));
   html = replaceMarker(html, "SERVICE_MODALS", ""); // service detail now lives on /services/<slug>/
   html = replaceMarker(html, "FEE_ROWS", renderFeeRows(services));
